@@ -1,0 +1,23 @@
+{
+  "name": "ReactPlongeoir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyang0619/ReactPlongeoir.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuyang0619/ReactPlongeoir/issues"
+  },
+  "homepage": "https://github.com/liuyang0619/ReactPlongeoir#readme",
+  "devDependencies": {
+    "webpack": "^4.4.1"
+  }
+}
