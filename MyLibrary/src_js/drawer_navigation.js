@@ -6,18 +6,22 @@ import {
     Button,
     StyleSheet,
     Image,
+    Hidden
 } from 'react-native';
 import { MyApp } from "./route";
 import Library from "./library";
 import Books from "./books";
+import Home from './home'
+import Profile from './profile'
+import Header from './header'
 import { DrawerNavigator } from "react-navigation";
 
 const DrawerNavigation = DrawerNavigator(
     {
         Home: {
-            screen: MyApp,
+            screen: Home,
             navigationOptions: {
-                drawerLabel: 'Home',
+                drawerLabel: 'Accueil',
                 drawerIcon: ({ tintColor }) => (
                     <Image
                         source={require('../images/library.png')}
@@ -29,7 +33,7 @@ const DrawerNavigation = DrawerNavigator(
         Library: {
             screen: Library,
             navigationOptions: {
-                drawerLabel: 'Library',
+                drawerLabel: 'Bibliothèque',
                 drawerIcon: ({ tintColor }) => (
                     <Image
                         source={require('../images/library.png')}
@@ -41,7 +45,7 @@ const DrawerNavigation = DrawerNavigator(
         Books: {
             screen: Books,
             navigationOptions: {
-                drawerLabel: 'Books',
+                drawerLabel: 'Mes livres',
                 drawerIcon: ({ tintColor }) => (
                     <Image
                         source={require('../images/library.png')}
@@ -50,6 +54,18 @@ const DrawerNavigation = DrawerNavigator(
                 ),
             },
         },
+        Profile: {
+            screen: Profile,
+            navigationOptions: {
+                drawerLabel: () => null
+              }
+        },
+        Header: {
+            screen: Header,
+            navigationOptions: {
+                drawerLabel: () => null
+              }
+        }
     }
 );
 

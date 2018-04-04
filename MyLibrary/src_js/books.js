@@ -15,6 +15,7 @@ export default class Books extends Component{
     
     return(
     <View>
+      <Header {...this.props}/>
         <Text>
           Mes livres
         </Text>

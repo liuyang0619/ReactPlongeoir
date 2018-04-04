@@ -21,6 +21,11 @@ import {
                 onPress={() => navigation.navigate('DrawerOpen')}
             />
         ),
+        headerRight: (
+          <Button
+            title='Profile'
+            onPress={() => navigation.navigate('Profile')}
+      />)
     }), 
     },
     Profile: { 

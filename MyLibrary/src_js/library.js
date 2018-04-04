@@ -26,6 +26,7 @@ export default class Library extends Component{
     
     return(
     <View>
+      <Header {...this.props}/>
         <Text>
           Bibliothèque
         </Text>

@@ -42,6 +42,7 @@ export default class Home extends Component{
     const imageWidth = dimensions.width;
     return(
     <View>
+        <Header {...this.props}/>
         <Image source={require('.././images/accueil.png')} style={{width: imageWidth, height: imageHeight}}>
         </Image>
         <Text style={styles.welcome}>

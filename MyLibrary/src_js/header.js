@@ -22,7 +22,7 @@ import MyApp from './route'
 
 export default class Header extends Component{
     
-  render(){
+  /*render(){
     const { navigate } = this.props.navigation;
     
     return (
@@ -41,6 +41,19 @@ export default class Header extends Component{
       //showSettings();
       console.log("in toolbar");
     }
+  }*/
+  render(){
+    const { navigate } = this.props.navigation;
+    return (
+      <ToolbarAndroid
+      navIcon={require('.././images/settings.png')}
+      title="MyLibrary"
+      style={styles.toolbar}
+      actions={[{title: 'Settings', icon: require('.././images/profile.png'), show: 'always'}]}
+      onActionSelected={() =>
+        this.props.navigation.navigate('Profile', { name: 'Jane' })}
+        />
+    );
   }
 }
 

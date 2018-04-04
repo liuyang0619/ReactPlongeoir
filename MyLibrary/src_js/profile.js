@@ -20,6 +20,7 @@ export default class Profile extends Component{
     
     return(
     <View>
+      <Header {...this.props}/>
         <Text>
           Welcome to your profile page!
         </Text>
