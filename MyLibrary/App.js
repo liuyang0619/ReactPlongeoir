@@ -18,19 +18,16 @@ import {
   Dimensions,
   Button
 } from 'react-native';
-import Home from './src_js/home'
-import Route, { MyApp } from './src_js/route'
-import Profile from './src_js/profile'
+import { MyApp } from './src_js/route'
+import DrawerNavigation from './src_js/drawer_navigation'
 
 //type Props = {};
 export default class App extends Component{
   render() {
     return (
-      <View>
-        <Home />
-      </View>
+      <DrawerNavigation />
     );
   }
 }
 
-AppRegistry.registerComponent('MyLibrary', () => MyApp);
+AppRegistry.registerComponent('MyLibrary', () => App);

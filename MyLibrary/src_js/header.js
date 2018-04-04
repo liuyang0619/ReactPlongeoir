@@ -18,26 +18,25 @@ import {
   Dimensions
 } from 'react-native';
 import Profile from './profile'
+import MyApp from './route'
 
 export default class Header extends Component{
-    constructor(props){
-        super(props);
-        const { navigate } = this.props.navigate;
-        this.onActionSelected = this.onActionSelected.bind(this);
-    }
     
   render(){
+    const { navigate } = this.props.navigation;
+    
     return (
       <ToolbarAndroid
       navIcon={require('.././images/settings.png')}
       title="MyLibrary"
       style={styles.toolbar}
       actions={[{title: 'Settings', icon: require('.././images/profile.png'), show: 'always'}]}
-      onActionSelected={this.onActionSelected} />
+      onActionSelected={() =>
+        navigate('Home', { name: 'Jane' })} />
     );
   }
-  onActionSelected(position){
-    this.props.navigate('Profile', { name: 'Jane' });
+  onAction(position){
+    //navigate('Profile', { name: 'Jane' });
     if (position === 0) { // index of 'Settings'
       //showSettings();
       console.log("in toolbar");

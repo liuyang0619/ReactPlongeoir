@@ -8,12 +8,27 @@ import {
   ToolbarAndroid,
   Image,
   Dimensions,
-  Button
+  Button,
 } from 'react-native';
-import Header from '../src_js/header'
+import Header from './header'
 import Profile from './profile'
 
 export default class Home extends Component{
+  /*constructor(props){
+    super(props);
+    const { navigate } = this.props.navigation;
+    
+  }*/
+  /*static navigationOptions = {
+    title: 'Accueil', 
+    //headerRight: <Button title='Info'/>
+    headerLeft: (
+      <Button
+          title='Menu'
+          onPress={() => navigate('DrawerOpen')}
+      />
+  ),
+  };*/
   render() {
     const { navigate } = this.props.navigation;
     const instructions = Platform.select({
@@ -27,7 +42,6 @@ export default class Home extends Component{
     const imageWidth = dimensions.width;
     return(
     <View>
-        <Header navigate={navigate} />
         <Image source={require('.././images/accueil.png')} style={{width: imageWidth, height: imageHeight}}>
         </Image>
         <Text style={styles.welcome}>

@@ -1,8 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 import React, { Component } from 'react';
 import {
   Platform,
@@ -15,13 +10,13 @@ import {
 } from 'react-native';
 import Header from './header'
 
-export default class Profile extends Component{
+export default class Books extends Component{
   render() {
     
     return(
     <View>
         <Text>
-          Welcome to your profile page!
+          Mes livres
         </Text>
     </View>
     )
